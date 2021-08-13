@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans+Condensed:wght@300&family=Stick&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fdfaf6;
+    font-family: 'montserrat', sans-serif;
+    color: #064420;
+}
+
+h1 {
+    font-family: 'stick', sans-serif;
+    margin-left: 20px;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #064420;
+}
+
+img {
+    width: 200%;
+}
+
+p {
+    font-family: 'open sans condensed', sans-serif;
+    line-height: 2;
+    font-size: large;
+    text-align: left;
+    color: #064420;
+}
+
+.navbar {
+    max-width: 1000px;
+    margin: -10px auto;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 20px;
+}
+
+.grid img {
+    height: 400px;
+    border-radius: 0px;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin: 20px;
+    color: #064420;
+}
+
+.grid p {
+    padding: 0 40px;
+}
+
+.grid h2 {
+    margin-top: 30px;
+}
+
+.card {
+    width: 60%;
+    background-color: #e4efe7;
+    border-radius: 0px;
+    box-shadow: 2px 2px 2px darkgray;
+}
+
+.grid .card {
+    position: relative;
+    left: 150px;
+    top: 60px;
+}
+
+.float {
+    width: 25rem;
+    margin-top: 20px;
+}
+
+img.float {
+    border-radius: 0px;
+}
+
+.container .float {
+    margin-bottom: 5rem;
+}
+
+.footer img {
+    width: 25px;
+    border-radius: 0px;
+}
+
+.contactme ul {
+    display: flex;
+    margin: 20px;
+    list-style-type: none;
+}
+
+.contactme a {
+    color: #064420;
+    margin: 20px 20px;
+    text-decoration: none;
+    font-family: 'stick', sans-serif;
+    font-size: 1.2rem;
+}
+
+.contactme {
+    display: flex;
+    margin: 0 20px;
+    justify-content: space-evenly;
+}
+
+.center {
+    text-align: center;
+}
+
+a:hover {
+    
+    border-bottom: 3px solid #fad586  ;
+}
+/* utilities */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+    margin-top: 40px;
+    position: relative;
+    background-color: #faf1e6;
+    height: 400px;
+    border-radius: 10px;
+}
+
+ footer {
+         color: #fff;
+         background: #333;
+         position: relative; /* required to position the copyright at the bottom */
+         font-size: 80%;
+      }
+      .footer-copyright {
+         width: 100%;
+         height: 40px;
+         background: #111;
+         /* positions the copyright at the bottom of the footer */
+         padding: 10px;
+         position: absolute;
+         bottom: 0px;
+         left: 0px;
+      }
+      .footer-body {
+         margin-bottom: 40px;
+         padding: 30px;
+      }
+      .footer-body > div:first-child {
+         font-size: 150%;
+      }
+      .footer-body ul {
+         list-style-type: none;
+         margin: 0px;
+         padding: 0px;
+         text-align: center;
+      }
+      .footer-body li > a {
+         color: white;
+         text-decoration: none;
+         margin-bottom: 9px;
+      }
+
+/* Media Queries */
+@media only screen and (max-width: 700px) {
+    .navbar .flex {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    h1 {
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    nav ul {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .container .flex600 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 20px 0;
+
+        
+    }
+    .flex600 {
+        height: auto;  
+        gap: 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+    
+    .float {
+        margin-top: 100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .flex600 .card {
+       margin-left: -150px;
+       width: 100%;
+    }
+
+    .grid img {
+        width: 80%;
+        display: block;
+        margin: 5px auto;  
+    }
+
+    .container {
+        width: 90%; 
+    }
+
+    .contactme ul {
+    margin: 20px auto;
+    }
+
+    .contactme a {
+    font-size: 1rem;
+    margin: 10px 5px;
+    text-decoration: none;
+    color: #064420;
+    }
+    .contactme {
+    display: grid;
+    margin: 0 0px;
+    justify-content: space-evenly;
+}
+
+   
+
+}
+    
