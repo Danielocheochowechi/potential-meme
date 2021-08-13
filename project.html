@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Echi</title>
+    <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans+Condensed:wght@300&family=Stick&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fdfaf6;
+    font-family: 'montserrat', sans-serif;
+    color: #064420;
+}
+
+h1 {
+    font-family: 'stick', sans-serif;
+    margin-left: 20px;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #064420;
+}
+
+img {
+    width: 200%;
+}
+
+p {
+    font-family: 'open sans condensed', sans-serif;
+    line-height: 2;
+    font-size: large;
+    text-align: left;
+    color: #064420;
+}
+
+.navbar {
+    max-width: 1000px;
+    margin: -10px auto;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 20px;
+}
+
+.grid img {
+    height: 400px;
+    border-radius: 0px;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin: 20px;
+    color: #064420;
+}
+
+.grid p {
+    padding: 0 40px;
+}
+
+.grid h2 {
+    margin-top: 30px;
+}
+
+.card {
+    width: 60%;
+    background-color: #e4efe7;
+    border-radius: 0px;
+    box-shadow: 2px 2px 2px darkgray;
+}
+
+.grid .card {
+    position: relative;
+    left: 150px;
+    top: 60px;
+}
+
+.float {
+    width: 25rem;
+    margin-top: 20px;
+}
+
+img.float {
+    border-radius: 0px;
+}
+
+.container .float {
+    margin-bottom: 5rem;
+}
+
+.footer img {
+    width: 25px;
+    border-radius: 0px;
+}
+
+.contactme ul {
+    display: flex;
+    margin: 20px;
+    list-style-type: none;
+}
+
+.contactme a {
+    color: #064420;
+    margin: 20px 20px;
+    text-decoration: none;
+    font-family: 'stick', sans-serif;
+    font-size: 1.2rem;
+}
+
+.contactme {
+    display: flex;
+    margin: 0 20px;
+    justify-content: space-evenly;
+}
+
+.center {
+    text-align: center;
+}
+
+a:hover {
+    
+    border-bottom: 3px solid #fad586  ;
+}
+/* utilities */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+    margin-top: 40px;
+    position: relative;
+    background-color: #faf1e6;
+    height: 400px;
+    border-radius: 10px;
+}
+
+ footer {
+         color: #fff;
+         background: #333;
+         position: relative; /* required to position the copyright at the bottom */
+         font-size: 80%;
+      }
+      .footer-copyright {
+         width: 100%;
+         height: 40px;
+         background: #111;
+         /* positions the copyright at the bottom of the footer */
+         padding: 10px;
+         position: absolute;
+         bottom: 0px;
+         left: 0px;
+      }
+      .footer-body {
+         margin-bottom: 40px;
+         padding: 30px;
+      }
+      .footer-body > div:first-child {
+         font-size: 150%;
+      }
+      .footer-body ul {
+         list-style-type: none;
+         margin: 0px;
+         padding: 0px;
+         text-align: center;
+      }
+      .footer-body li > a {
+         color: white;
+         text-decoration: none;
+         margin-bottom: 9px;
+      }
+
+/* Media Queries */
+@media only screen and (max-width: 700px) {
+    .navbar .flex {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    h1 {
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    nav ul {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .container .flex600 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 20px 0;
+
+        
+    }
+    .flex600 {
+        height: auto;  
+        gap: 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+    
+    .float {
+        margin-top: 100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .flex600 .card {
+       margin-left: -150px;
+       width: 100%;
+    }
+
+    .grid img {
+        width: 80%;
+        display: block;
+        margin: 5px auto;  
+    }
+
+    .container {
+        width: 90%; 
+    }
+
+    .contactme ul {
+    margin: 20px auto;
+    }
+
+    .contactme a {
+    font-size: 1rem;
+    margin: 10px 5px;
+    text-decoration: none;
+    color: #064420;
+    }
+    .contactme {
+    display: grid;
+    margin: 0 0px;
+    justify-content: space-evenly;
+}
+
+   
+
+}
+    
+
+    </style>
+</head>
+    
+<body>
+    <h2>Application</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Apply</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Apply</h1>
+      <p>Please fill in this form to give us the details about what you want.</p>
+      <hr>
+         <label for="Fullname"><b>Fullname</b></label>
+      <input type="text" placeholder="Enter Fullname" name="Fullname" required>
+ 
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+     
+      <label for="Country"><b>Country</b></label>
+      <input type="password" placeholder="Country" name="Country" required>
+      
+         <label for="State"><b>State</b></label>
+      <input type="password" placeholder="State" name="State" required>
+      <label>
+          <label for="Address"><b>Address</b></label>
+      <input type="Address" placeholder="Address" name="Address" required>
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+    <!-- navigation bar -->
+    <header>
+        <div class="navbar">
+            <div class="container flex">
+                <h1 class="logo">Daniel Echi</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="project.html">Projects</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- main section -->
+    <section>
+        <div class="container">
+            <div class="grid flex600">
+                <div>
+                    <img src="./images/images%20(6).jpg" alt="Dannys Photo">
+                </div>
+               
+   <footer>
+<div class="footer-body">
+<div> Contact Me. </div>
+<div>
+<p> </p>
+<ul>
+<li><a href="08146951125daniel@gmail.com"> Gmail</a></li><br>
+<li><a href="Daniel Echi"> Facebook </a></li><br>
+<li><a href="Daniel Echi"> Twitter</a></li><br>
+<li><a href="Daniel Echi"> Instagram </a></li><br>
+    
+</ul>
+</div>
+</div>
+<div class="footer-copyright">
+         © . Daniel Echi
+</div>
+</footer>
+        
+    
+</body>
+</html>
